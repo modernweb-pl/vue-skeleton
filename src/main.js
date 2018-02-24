@@ -4,7 +4,7 @@ import App from './app/app';
 import router from './app/router/router';
 import './styles/main.scss';
 
-Vue.config.productionTip = false;
+Vue.config.productionTip = process.env.NODE_ENV === 'production';
 
 Vue.use(BootstrapVue);
 
