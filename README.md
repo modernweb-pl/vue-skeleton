@@ -1,10 +1,11 @@
 # vue-skeleton
 
-> A Vue.js skeleton project
+> A Vue.js multipage skeleton with prerendering
 
 What's included:
 * [bootstrap-vue](https://bootstrap-vue.js.org/)
 * [font-awesome](https://fontawesome.com/)
+* [prerender-spa-plugin](https://www.npmjs.com/package/prerender-spa-plugin)
 
 ## Build Setup
 
