@@ -1,6 +1,10 @@
 # vue-skeleton
 
-> A Vue.js project
+> A Vue.js skeleton project
+
+What's included:
+* [bootstrap-vue](https://bootstrap-vue.js.org/)
+* [font-awesome](https://fontawesome.com/)
 
 ## Build Setup
 
