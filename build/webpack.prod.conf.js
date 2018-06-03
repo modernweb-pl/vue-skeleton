@@ -79,12 +79,12 @@ const webpackConfig = merge(baseWebpackConfig, {
       // necessary to consistently work with multiple chunks via CommonsChunkPlugin
       chunksSortMode: 'dependency',
     }),
-    new PrerenderSpaPlugin(
+    new PrerenderSpaPlugin({
       // Path to compiled app
-      path.join(__dirname, '../dist'),
+      staticDir: path.join(__dirname, '../dist'),
       // List of endpoints you wish to prerender
-      [ '/', '/about', '/contact' ],
-    ),
+      routes: ['/', '/about', '/contact'],
+    }),
     // keep module.id stable when vendor modules does not change
     new webpack.HashedModuleIdsPlugin(),
     // enable scope hoisting
@@ -124,7 +124,7 @@ const webpackConfig = merge(baseWebpackConfig, {
       {
         from: path.resolve(__dirname, '../static'),
         to: config.build.assetsSubDirectory,
-        ignore: [ '.*' ],
+        ignore: ['.*'],
       },
     ]),
   ],
