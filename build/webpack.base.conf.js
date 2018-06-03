@@ -1,4 +1,6 @@
 'use strict';
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+
 const path = require('path');
 const utils = require('./utils');
 const config = require('../config');
@@ -76,6 +78,12 @@ module.exports = {
       },
     ],
   },
+  plugins: [
+    new CleanWebpackPlugin([config.build.assetsRoot], {
+      verbose: false,
+      allowExternal: true,
+    }),
+  ],
   node: {
     // prevent webpack from injecting useless setImmediate polyfill because Vue
     // source contains it (although only uses it if it's native).
