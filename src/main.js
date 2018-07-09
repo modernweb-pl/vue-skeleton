@@ -1,5 +1,5 @@
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faHome } from '@fortawesome/free-solid-svg-icons';
+import { faHome, faAngleDoubleRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import Vue from 'vue';
 import BootstrapVue from 'bootstrap-vue';
@@ -10,7 +10,7 @@ import './styles/main.scss';
 Vue.config.productionTip = process.env.NODE_ENV === 'production';
 
 Vue.use(BootstrapVue);
-library.add(faHome);
+library.add(faHome, faAngleDoubleRight);
 Vue.component('font-awesome-icon', FontAwesomeIcon);
 
 /* eslint-disable no-new */
