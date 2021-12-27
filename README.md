@@ -5,31 +5,47 @@
 What's included:
 * [bootstrap-vue](https://bootstrap-vue.js.org/)
 * [font-awesome](https://fontawesome.com/)
-* [prerender-spa-plugin](https://www.npmjs.com/package/prerender-spa-plugin)
 
-## Build Setup
+Installed Vue CLI Plugins:
+* [prerender-spa](https://github.com/SolarLiner/vue-cli-plugin-prerender-spa)
+* [babel](https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel)
+* [typescript](https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-typescript)
+* [pwa](https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-pwa)
+* [router](https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-router)
+* [vuex](https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-vuex)
+* [eslint](https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-eslint)
+* [unit-jest](https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-unit-jest)
+* [e2e-cypress](https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-e2e-cypress)
 
-``` bash
-# install dependencies
-npm install
-
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
-
-# run unit tests
-npm run unit
-
-# run e2e tests
-npm run e2e
-
-# run all tests
-npm test
+## Project setup
+```
+yarn install
 ```
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+### Compiles and hot-reloads for development
+```
+yarn serve
+```
+
+### Compiles and minifies for production
+```
+yarn build
+```
+
+### Run your unit tests
+```
+yarn test
+```
+
+### Run your end-to-end tests
+```
+yarn test:e2e
+```
+
+### Lints and fixes files
+```
+yarn lint:fix
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
