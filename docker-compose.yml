@@ -1,0 +1,12 @@
+version: '3.7'
+
+services:
+  app:
+    build:
+      context: .
+    ports:
+      - 8080:80
+    network_mode: bridge
+    environment:
+      - VIRTUAL_HOST=vue-skeleton.localhost
+    tty: true

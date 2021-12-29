@@ -18,34 +18,59 @@ Installed Vue CLI Plugins:
 * [e2e-cypress](https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-e2e-cypress)
 
 ## Project setup
-```
+```shell
 yarn install
 ```
 
 ### Compiles and hot-reloads for development
-```
+```shell
 yarn serve
 ```
 
 ### Compiles and minifies for production
-```
+```shell
 yarn build
 ```
 
 ### Run your unit tests
-```
+```shell
 yarn test
 ```
 
 ### Run your end-to-end tests
-```
+```shell
 yarn test:e2e
 ```
 
 ### Lints and fixes files
-```
+```shell
 yarn lint:fix
 ```
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+## Docker setup
+
+Configure Docker registry in `package.json`:
+```json
+"docker": {
+  "registry": "ghcr.io/modernweb-pl"
+},
+```
+
+## Build & publish Docker image
+```shell
+yarn docker:build
+yarn docker:push
+```
+
+## Docker Compose
+
+Docker Compose is configured to work with [jwilder/nginx-proxy](https://hub.docker.com/r/jwilder/nginx-proxy) and publish production build at `http://vue-skeleton.localhost`
+
+```shell
+yarn docker:compose:build
+yarn docker:compose:up
+yarn docker:compose:down
+```

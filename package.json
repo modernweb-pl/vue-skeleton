@@ -8,6 +8,11 @@
     "build": "vue-cli-service build",
     "build:spa": "yarn build --skip-plugins prerender-spa",
     "build:analyze": "yarn build --report",
+    "docker:build": "node .docker/build.js",
+    "docker:push": "node .docker/push.js",
+    "docker:compose:build": "docker-compose build",
+    "docker:compose:up": "docker-compose up -d",
+    "docker:compose:down": "docker-compose down",
     "inspect": "vue-cli-service inspect",
     "lint": "vue-cli-service lint --no-fix",
     "lint:fix": "vue-cli-service lint",
@@ -19,6 +24,9 @@
     "test:e2e:gui": "vue-cli-service test:e2e",
     "version:prod": "standard-version",
     "version:rc": "standard-version --prerelease rc"
+  },
+  "docker": {
+    "registry": "ghcr.io/modernweb-pl"
   },
   "dependencies": {
     "bootstrap-vue": "^2.21.2",
