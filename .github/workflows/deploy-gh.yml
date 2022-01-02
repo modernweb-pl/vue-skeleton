@@ -7,7 +7,7 @@ jobs:
     name: Deploy to GitHub Pages
     runs-on: ubuntu-latest
     env:
-      BASE_URL: vue-skeleton
+      GITHUB_PAGES: true
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
