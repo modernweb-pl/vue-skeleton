@@ -26,6 +26,10 @@
     "version:prod": "standard-version",
     "version:rc": "standard-version --prerelease rc"
   },
+  "engines": {
+    "node": ">=14",
+    "yarn": "^1.22"
+  },
   "docker": {
     "registry": "ghcr.io/modernweb-pl"
   },
