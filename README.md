@@ -2,6 +2,8 @@
 
 > A Vue.js multipage skeleton with prerendering
 
+[![Verify](https://github.com/modernweb-pl/vue-skeleton/actions/workflows/verify.yml/badge.svg?branch=master)](https://github.com/modernweb-pl/vue-skeleton/actions/workflows/verify.yml)
+
 What's included:
 * [bootstrap-vue](https://bootstrap-vue.js.org/)
 * [font-awesome](https://fontawesome.com/)
