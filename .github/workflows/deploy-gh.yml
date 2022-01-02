@@ -6,6 +6,7 @@ jobs:
   deploy:
     name: Deploy to GitHub Pages
     runs-on: ubuntu-latest
+    environment: github-pages
     env:
       GITHUB_PAGES: true
     steps:
