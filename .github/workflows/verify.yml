@@ -1,7 +1,9 @@
-name: Verify PR
+name: Verify
 
 on:
   pull_request:
+    branches: [ master ]
+  push:
     branches: [ master ]
 
 jobs:
