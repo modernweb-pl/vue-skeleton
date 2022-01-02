@@ -21,11 +21,11 @@ Promise.resolve()
     .then((answer) => pkg.author = answer || pkg.author))
   .then(() => rl.close())
   .then(() => fs.writeFile(`${rootDir}/package.json`, JSON.stringify(pkg, null, 2) + '\n'))
-  .then(() => fs.readFile(`${rootDir}/README.md`, 'utf-8')
+  .then(() => fs.readFile(`${rootDir}/README.md`, { encoding: 'utf-8' })
     .then((content) => fs.writeFile(`${rootDir}/README.md`, content
       .replace(/# .*/, `# ${pkg.name}`)
       .replace(/> .*/, `> ${pkg.description}`))))
-  .then(() => fs.readFile(`${rootDir}/docker-compose.yml`, 'utf-8')
+  .then(() => fs.readFile(`${rootDir}/docker-compose.yml`, { encoding: 'utf-8' })
     .then((content) => fs.writeFile(`${rootDir}/docker-compose.yml`, content
       .replace(/VIRTUAL_HOST=.*/, `VIRTUAL_HOST=${pkg.name}.localhost`))))
-  .then(() => fs.unlink(`${rootDir}/CHANGELOG.md`));
+  .then(() => fs.unlink(`${rootDir}/CHANGELOG.md`).catch(() => void 0));
