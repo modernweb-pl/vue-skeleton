@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0-rc.2](https://github.com/modernweb-pl/vue-skeleton/compare/v1.1.0-rc.1...v1.1.0-rc.2) (2022-01-02)
+
+
+### Bug Fixes
+
+* **ci:** publish docker ([e43b8ff](https://github.com/modernweb-pl/vue-skeleton/commit/e43b8ffab416f05b5034af17686c9d52ae78ca4a))
+
 ## [1.1.0-rc.1](https://github.com/modernweb-pl/vue-skeleton/compare/v1.1.0-rc.0...v1.1.0-rc.1) (2022-01-02)
 
 
