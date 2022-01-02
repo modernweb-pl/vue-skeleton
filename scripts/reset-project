@@ -1,0 +1,31 @@
+#!/usr/bin/env node
+
+const fs = require('fs/promises');
+const path = require('path');
+const readline = require('readline');
+
+const pkg = require('../package');
+
+const rootDir = path.resolve(`${__dirname}/..`);
+const rl = readline.createInterface({ input: process.stdin, output: process.stdout });
+const question = (query) => new Promise((resolve) => rl.question(query, resolve));
+
+Promise.resolve()
+  .then(() => question(`Package name: (${pkg.name}) `)
+    .then((answer) => pkg.name = answer || pkg.name))
+  .then(() => question(`Version: (0.0.1) `)
+    .then((answer) => pkg.version = answer || '0.0.1'))
+  .then(() => question(`Description: (${pkg.description}) `)
+    .then((answer) => pkg.description = answer || pkg.description))
+  .then(() => question(`Author: (${pkg.author}) `)
+    .then((answer) => pkg.author = answer || pkg.author))
+  .then(() => rl.close())
+  .then(() => fs.writeFile(`${rootDir}/package.json`, JSON.stringify(pkg, null, 2) + '\n'))
+  .then(() => fs.readFile(`${rootDir}/README.md`, 'utf-8')
+    .then((content) => fs.writeFile(`${rootDir}/README.md`, content
+      .replace(/# .*/, `# ${pkg.name}`)
+      .replace(/> .*/, `> ${pkg.description}`))))
+  .then(() => fs.readFile(`${rootDir}/docker-compose.yml`, 'utf-8')
+    .then((content) => fs.writeFile(`${rootDir}/docker-compose.yml`, content
+      .replace(/VIRTUAL_HOST=.*/, `VIRTUAL_HOST=${pkg.name}.localhost`))))
+  .then(() => fs.unlink(`${rootDir}/CHANGELOG.md`));
