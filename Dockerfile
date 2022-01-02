@@ -1,5 +1,5 @@
 ### Builder
-FROM circleci/node:12-browsers as builder
+FROM circleci/node:14-browsers as builder
 
 RUN mkdir /home/circleci/app
 WORKDIR /home/circleci/app
