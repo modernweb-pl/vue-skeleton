@@ -1,7 +1,7 @@
 {
   "name": "vue-skeleton",
   "version": "1.1.0",
-  "description": "A Vue.js project skeleton",
+  "description": "Vue.js + TypeScript App skeleton",
   "author": "Rafal Galka <rafal.galka@modernweb.pl>",
   "private": true,
   "scripts": {
