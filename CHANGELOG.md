@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://github.com/modernweb-pl/vue-skeleton/compare/v1.1.0-rc.2...v1.1.0) (2022-01-03)
+
+
+### Features
+
+* **package:** simple project reset script ([c44f338](https://github.com/modernweb-pl/vue-skeleton/commit/c44f33824e482d4da4c52a7f6a2b2e7c86273ec5))
+
 ## [1.1.0-rc.2](https://github.com/modernweb-pl/vue-skeleton/compare/v1.1.0-rc.1...v1.1.0-rc.2) (2022-01-02)
 
 
