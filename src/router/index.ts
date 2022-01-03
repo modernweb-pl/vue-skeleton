@@ -1,8 +1,10 @@
 import Vue from 'vue';
+import VueMeta from 'vue-meta';
 import VueRouter, { RouteConfig } from 'vue-router';
 import Home from '../views/home.vue';
 
 Vue.use(VueRouter);
+Vue.use(VueMeta);
 
 const routes: Array<RouteConfig> = [
   {

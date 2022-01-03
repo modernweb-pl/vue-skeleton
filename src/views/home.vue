@@ -9,7 +9,7 @@ import HelloWorld from '@/components/hello-world.vue'; // @ is an alias to /src
 import Vue from 'vue';
 
 export default Vue.extend({
-  name: 'Home',
+  name: 'home',
   components: {
     HelloWorld,
   },

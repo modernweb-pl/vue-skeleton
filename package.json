@@ -1,7 +1,7 @@
 {
   "name": "vue-skeleton",
   "version": "1.1.0",
-  "description": "A Vue.js project skeleton",
+  "description": "Vue.js + TypeScript App skeleton",
   "author": "Rafal Galka <rafal.galka@modernweb.pl>",
   "private": true,
   "scripts": {
@@ -39,6 +39,7 @@
     "font-awesome": "~4.7.0",
     "register-service-worker": "^1.7.1",
     "vue": "^2.6.11",
+    "vue-meta": "^2.4.0",
     "vue-router": "^3.2.0",
     "vuex": "^3.4.0"
   },
