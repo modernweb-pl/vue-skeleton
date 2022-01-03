@@ -37,7 +37,8 @@ import Vue from 'vue';
 
 export default Vue.extend({
   name: 'contact',
+  metaInfo: {
+    title: 'Contact',
+  },
 });
 </script>
-
-<style lang="scss" scoped></style>

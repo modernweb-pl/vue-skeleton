@@ -40,10 +40,20 @@
 
 <script lang="ts">
 import Vue from 'vue';
+import pkg from '../package.json';
 
 export default Vue.extend({
   data: () => ({
     date: new Date().getFullYear(),
   }),
+  metaInfo: {
+    meta: [
+      { charset: 'utf-8' },
+      { httpEquiv: 'X-UA-Compatible', content: 'IE=edge' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1, shrink-to-fit=no' },
+    ],
+    link: [{ rel: 'icon', href: `${process.env.BASE_URL}favicon.ico` }],
+    titleTemplate: (chunk) => (chunk ? `${chunk} | ${pkg.description}` : pkg.description),
+  },
 });
 </script>

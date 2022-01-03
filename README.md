@@ -6,6 +6,7 @@
 
 What's included:
 * [bootstrap-vue](https://bootstrap-vue.js.org/)
+* [vue-meta](https://vue-meta.nuxtjs.org/)
 * [font-awesome](https://fontawesome.com/)
 
 Installed Vue CLI Plugins:
