@@ -34,6 +34,7 @@
     "registry": "ghcr.io/modernweb-pl"
   },
   "dependencies": {
+    "bootstrap": "^4.6.1",
     "bootstrap-vue": "^2.21.2",
     "core-js": "^3.6.5",
     "font-awesome": "~4.7.0",
