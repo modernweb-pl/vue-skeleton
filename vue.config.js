@@ -1,11 +1,15 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 
 const pkg = require('./package');
-const { GITHUB_PAGES } = process.env;
+const { NODE_ENV, GITHUB_PAGES } = process.env;
+const isDev = NODE_ENV !== 'production';
 
 /** @type {import('@vue/cli-service').ProjectOptions} */
 module.exports = {
   publicPath: GITHUB_PAGES ? `/${pkg.name}/` : '/',
+  css: {
+    sourceMap: isDev,
+  },
   pluginOptions: {
     prerenderSpa: {
       renderRoutes: ['/', '/about', '/contact'],
