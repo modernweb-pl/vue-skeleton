@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 
 const pkg = require('./package');
+const path = require('path');
 const { NODE_ENV, GITHUB_PAGES } = process.env;
 const isDev = NODE_ENV !== 'production';
 
@@ -16,6 +17,11 @@ module.exports = {
       useRenderEvent: false,
       headless: true,
       onlyProduction: true,
+    },
+    // https://cli.vuejs.org/guide/css.html#automatic-imports
+    'style-resources-loader': {
+      preProcessor: 'scss',
+      patterns: [path.resolve(__dirname, './src/styles/imports.scss')],
     },
   },
   chainWebpack: (config) => {
