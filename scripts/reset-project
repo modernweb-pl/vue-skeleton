@@ -27,4 +27,7 @@ Promise.resolve()
       .replace(/> .*/, `> ${pkg.description}`))))
   .then(() => fs.readFile(`${rootDir}/docker-compose.yml`, { encoding: 'utf-8' })
     .then((content) => fs.writeFile(`${rootDir}/docker-compose.yml`, content
-      .replace(/VIRTUAL_HOST=.*/, `VIRTUAL_HOST=${pkg.name}.localhost`))));
+      .replace(/VIRTUAL_HOST=.*/, `VIRTUAL_HOST=${pkg.name}.localhost`))))
+  .then(() => fs.readFile(`${rootDir}/.env.production`, { encoding: 'utf-8' })
+    .then((content) => fs.writeFile(`${rootDir}/.env.production`, content
+      .replace(/GTAG_ID=.*/, `GTAG_ID=`))));
