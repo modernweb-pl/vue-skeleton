@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "61c8c2f66f851225dcc6d662c73358d0",
+    "revision": "f18c7817c5003969746759b2b7f283b3",
     "url": "/vue-skeleton/app.html"
   },
   {
-    "revision": "70187c1864152fca3730",
+    "revision": "15cf461a714ae65e3eec",
     "url": "/vue-skeleton/css/app.c5bc68cf.css"
   },
   {
@@ -36,8 +36,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/vue-skeleton/js/about.a2604299.js"
   },
   {
-    "revision": "70187c1864152fca3730",
-    "url": "/vue-skeleton/js/app.f95a8503.js"
+    "revision": "15cf461a714ae65e3eec",
+    "url": "/vue-skeleton/js/app.1b0ae449.js"
   },
   {
     "revision": "c95f6d9fd2fbe24f64e5",
