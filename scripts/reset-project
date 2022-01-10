@@ -30,4 +30,4 @@ Promise.resolve()
       .replace(/VIRTUAL_HOST=.*/, `VIRTUAL_HOST=${pkg.name}.localhost`))))
   .then(() => fs.readFile(`${rootDir}/.env.production`, { encoding: 'utf-8' })
     .then((content) => fs.writeFile(`${rootDir}/.env.production`, content
-      .replace(/GTAG_ID=.*/, `GTAG_ID=`))));
+      .replace(/VUE_APP_GTAG_ID=.*/, `VUE_APP_GTAG_ID=`))));
