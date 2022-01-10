@@ -1,6 +1,6 @@
 # vue-skeleton
 
-> A Vue.js multipage skeleton with prerendering
+> Vue.js + TypeScript multi-page skeleton with pre-rendering
 
 [![Verify](https://github.com/modernweb-pl/vue-skeleton/actions/workflows/verify.yml/badge.svg?branch=master)](https://github.com/modernweb-pl/vue-skeleton/actions/workflows/verify.yml)
 

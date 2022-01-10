@@ -1,14 +1,20 @@
 import BootstrapVue from 'bootstrap-vue';
 import Vue from 'vue';
+import VueGtag from 'vue-gtag';
 import App from './app.vue';
 import './registerServiceWorker';
 import router from './router';
 import store from './store';
 import './styles/main.scss';
 
-Vue.config.productionTip = process.env.NODE_ENV === 'production';
+const { NODE_ENV, GTAG_ID } = process.env;
+
+Vue.config.productionTip = NODE_ENV === 'production';
 
 Vue.use(BootstrapVue);
+if (GTAG_ID) {
+  Vue.use(VueGtag, { config: { id: GTAG_ID } }, router);
+}
 
 new Vue({
   router,
