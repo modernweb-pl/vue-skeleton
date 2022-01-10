@@ -30,6 +30,7 @@ const routes: Array<RouteConfig> = [
 const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
+  linkActiveClass: 'active',
   // https://router.vuejs.org/guide/advanced/scroll-behavior.html
   scrollBehavior(to, from, savedPosition) {
     if (to.hash) {
