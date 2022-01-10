@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/vue-skeleton/precache-manifest.e0c0b14024bc5e9831ae08380bd1eef3.js"
+  "/vue-skeleton/precache-manifest.ddbd25f6a175bd3a48288eac7139b57c.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "vue-skeleton"});
