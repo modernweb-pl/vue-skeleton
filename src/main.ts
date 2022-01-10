@@ -7,13 +7,13 @@ import router from './router';
 import store from './store';
 import './styles/main.scss';
 
-const { NODE_ENV, GTAG_ID } = process.env;
+const { NODE_ENV, VUE_APP_GTAG_ID } = process.env;
 
 Vue.config.productionTip = NODE_ENV === 'production';
 
 Vue.use(BootstrapVue);
-if (GTAG_ID) {
-  Vue.use(VueGtag, { config: { id: GTAG_ID } }, router);
+if (VUE_APP_GTAG_ID) {
+  Vue.use(VueGtag, { config: { id: VUE_APP_GTAG_ID } }, router);
 }
 
 new Vue({
