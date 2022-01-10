@@ -2,7 +2,7 @@
   "name": "vue-skeleton",
   "version": "1.1.0",
   "private": true,
-  "description": "Vue.js + TypeScript App skeleton",
+  "description": "Vue.js + TypeScript multi-page skeleton with pre-rendering",
   "author": "Rafal Galka <rafal.galka@modernweb.pl>",
   "scripts": {
     "build": "vue-cli-service build",
