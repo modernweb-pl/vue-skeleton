@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import VueMeta from 'vue-meta';
 import VueRouter, { RouteConfig } from 'vue-router';
+import Error404 from '../views/error-404.vue';
 import Home from '../views/home.vue';
 
 Vue.use(VueRouter);
@@ -24,6 +25,11 @@ const routes: Array<RouteConfig> = [
     path: '/contact',
     name: 'contact',
     component: () => import(/* webpackChunkName: "contact" */ '../views/contact.vue'),
+  },
+  {
+    path: '*',
+    name: 'error-404',
+    component: Error404,
   },
 ];
 
