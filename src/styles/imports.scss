@@ -1,0 +1,21 @@
+/**
+ * This file aggregates all variables / functions / mixins.
+ * It is automatically injected into every component specific stylesheet.
+ *
+ * @see https://cli.vuejs.org/guide/css.html#automatic-imports
+ *
+ * DON'T add any styles here as they will be repeated for each component!
+ */
+
+// Local
+@import 'functions';
+@import 'variables';
+@import 'mixins';
+
+// Bootstrap
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/mixins';
+
+// Bootstrap Vue
+@import '~bootstrap-vue/src/variables';

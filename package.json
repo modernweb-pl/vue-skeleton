@@ -1,37 +1,30 @@
 {
   "name": "vue-skeleton",
   "version": "1.1.0",
+  "private": true,
   "description": "Vue.js + TypeScript App skeleton",
   "author": "Rafal Galka <rafal.galka@modernweb.pl>",
-  "private": true,
   "scripts": {
     "build": "vue-cli-service build",
-    "build:spa": "yarn build --skip-plugins prerender-spa",
     "build:analyze": "yarn build --report",
+    "build:spa": "yarn build --skip-plugins prerender-spa",
     "docker:build": ".docker/cli build",
+    "docker:compose:build": "docker-compose build",
+    "docker:compose:down": "docker-compose down",
+    "docker:compose:up": "docker-compose up -d",
     "docker:push": ".docker/cli push",
     "docker:run": ".docker/cli run",
-    "docker:compose:build": "docker-compose build",
-    "docker:compose:up": "docker-compose up -d",
-    "docker:compose:down": "docker-compose down",
     "inspect": "vue-cli-service inspect",
     "lint": "vue-cli-service lint --no-fix",
     "lint:fix": "vue-cli-service lint",
     "serve": "vue-cli-service serve",
     "serve:spa": "vue-cli-service serve --mode production --skip-plugins prerender-spa",
     "test": "vue-cli-service test:unit",
-    "test:watch": "vue-cli-service test:unit --watch",
     "test:e2e": "vue-cli-service test:e2e --headless",
     "test:e2e:gui": "vue-cli-service test:e2e",
+    "test:watch": "vue-cli-service test:unit --watch",
     "version:prod": "standard-version",
     "version:rc": "standard-version --prerelease rc"
-  },
-  "engines": {
-    "node": ">=14",
-    "yarn": "^1.22"
-  },
-  "docker": {
-    "registry": "ghcr.io/modernweb-pl"
   },
   "dependencies": {
     "bootstrap": "^4.6.1",
@@ -68,9 +61,18 @@
     "sass": "~1.32.13",
     "sass-loader": "^8.0.2",
     "standard-version": "^9.3.2",
+    "style-resources-loader": "^1.4.1",
     "typescript": "~4.1.5",
     "vue-cli-plugin-prerender-spa": "^1.1.6",
+    "vue-cli-plugin-style-resources-loader": "~0.1.5",
     "vue-template-compiler": "^2.6.11"
+  },
+  "docker": {
+    "registry": "ghcr.io/modernweb-pl"
+  },
+  "engines": {
+    "node": ">=14",
+    "yarn": "^1.22"
   },
   "gitHooks": {
     "pre-commit": "lint-staged"
