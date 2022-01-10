@@ -51,6 +51,7 @@ export default Vue.extend({
       { charset: 'utf-8' },
       { httpEquiv: 'X-UA-Compatible', content: 'IE=edge' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1, shrink-to-fit=no' },
+      { name: 'version', content: process.env.VUE_APP_VERSION },
     ],
     link: [{ rel: 'icon', href: `${process.env.BASE_URL}favicon.ico` }],
     titleTemplate: (chunk) => (chunk ? `${chunk} | ${pkg.description}` : pkg.description),

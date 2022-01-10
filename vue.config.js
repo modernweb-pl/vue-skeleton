@@ -4,6 +4,7 @@ const pkg = require('./package');
 const path = require('path');
 const { NODE_ENV, GITHUB_PAGES } = process.env;
 const isDev = NODE_ENV !== 'production';
+process.env.VUE_APP_VERSION = pkg.version;
 
 /** @type {import('@vue/cli-service').ProjectOptions} */
 module.exports = {
